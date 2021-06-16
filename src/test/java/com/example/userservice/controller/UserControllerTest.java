@@ -54,27 +54,27 @@ public class UserControllerTest {
     }
 
 
-//    @Test
-//    void findUserById() throws Exception {
-//        mvc.perform(get("/user/1")
-//                .contentType(MediaType.APPLICATION_JSON)
-//                .accept(MediaType.APPLICATION_JSON))
-//                .andExpect(status().isOk())
-//                .andExpect(jsonPath("$.userId").value(1L))
-//                .andExpect(jsonPath("$.firstName").value("moo"))
-//                .andExpect(jsonPath("$.lastName").value("parwani"))
-//                .andExpect(jsonPath("$.email").value("mohammadparwani@outlook.com"))
-//                .andExpect(jsonPath("$.password").value("test1996"));
-//    }
+    @Test
+    void findUserById() throws Exception {
+        mvc.perform(get("/user/1")
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.userId").value(1L))
+                .andExpect(jsonPath("$.firstName").value("moo"))
+                .andExpect(jsonPath("$.lastName").value("parwani"))
+                .andExpect(jsonPath("$.email").value("mohammadparwani@outlook.com"))
+                .andExpect(jsonPath("$.password").value("test1996"));
+    }
 //
-//    @Test
-//    void deleteAdminById() throws Exception {
-//        mvc.perform(MockMvcRequestBuilders
-//                .delete("/user/delete/1")
-//                .contentType(MediaType.APPLICATION_JSON)
-//                .accept(MediaType.APPLICATION_JSON))
-//                .andExpect(status().isOk());
-//    }
+    @Test
+    void deleteAdminById() throws Exception {
+        mvc.perform(MockMvcRequestBuilders
+                .delete("/user/delete/1")
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk());
+    }
 //
 //    @Test
 //    void getAllAdmins()  throws Exception{
